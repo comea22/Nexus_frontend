@@ -10,7 +10,7 @@ function Footer() {
           <Link to="/register">會員註冊</Link>
           <Link to="/login">會員登入</Link>
         </div>
-        <p className="text-sm text-gray-500">© 2025 PingPong. All rights reserved.</p>
+        <p className="text-sm text-gray-500">© 2026 PingPong. All rights reserved.</p>
       </div>
     </footer>
   )
