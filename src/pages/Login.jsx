@@ -62,7 +62,7 @@ function Login() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
             placeholder="請輸入電子信箱"
           />
         </div>
@@ -78,7 +78,7 @@ function Login() {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
               placeholder="請輸入密碼"
             />
             <button
@@ -94,13 +94,13 @@ function Login() {
         <div className="flex gap-4">
           <Link
             to="/forgot-password"
-            className="flex-1 text-center border border-blue-600 text-blue-600 py-3 rounded-2xl font-medium hover:bg-blue-50 transition-colors"
+            className="flex-1 text-center border border-primary text-primary py-3 rounded-2xl font-medium transition-colors"
           >
             忘記密碼
           </Link>
           <button
             type="submit"
-            className="flex-1 bg-blue-600 text-white py-3 rounded-2xl font-medium hover:bg-blue-700 transition-colors cursor-pointer"
+            className="flex-1 text-white py-3 rounded-2xl font-medium transition-colors cursor-pointer btn-primary"
           >
             登入
           </button>
@@ -109,7 +109,7 @@ function Login() {
 
       <div className="mt-6 text-center text-sm text-gray-600">
         還沒有帳號？
-        <Link to="/register" className="text-blue-600 underline underline-offset-6 ml-1">
+        <Link to="/register" className="underline underline-offset-6 ml-1 text-primary">
           立即註冊
         </Link>
       </div>

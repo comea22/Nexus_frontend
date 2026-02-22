@@ -50,14 +50,14 @@ function ForgotPassword() {
             name="email"
             value={email}
             onChange={handleChange}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
             placeholder="請輸入 Email"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-2xl font-medium hover:bg-blue-700 transition-colors"
+          className="w-full text-white py-3 rounded-2xl font-medium transition-colors cursor-pointer btn-primary"
         >
           送出
         </button>

@@ -83,7 +83,7 @@ function Register() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
             placeholder="請輸入姓名"
           />
         </div>
@@ -98,7 +98,7 @@ function Register() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
             placeholder="請輸入 Email"
           />
         </div>
@@ -115,7 +115,7 @@ function Register() {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                 placeholder="請輸入密碼"
               />
               <button
@@ -153,7 +153,7 @@ function Register() {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                 placeholder="請再次輸入密碼"
               />
               <button
@@ -183,13 +183,13 @@ function Register() {
             name="birthday"
             value={formData.birthday}
             onChange={handleChange}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-2xl font-medium hover:bg-blue-700 transition-colors cursor-pointer mt-6"
+          className="w-full text-white py-3 rounded-2xl font-medium transition-colors cursor-pointer mt-6 btn-primary"
         >
           註冊
         </button>
@@ -197,7 +197,7 @@ function Register() {
 
       <div className="mt-6 text-center text-sm text-gray-600">
         已經有帳號？
-        <Link to="/login" className="text-blue-600 ml-1 underline underline-offset-6 hover:text-blue-800">
+        <Link to="/login" className="ml-1 underline underline-offset-6 text-primary">
           立即登入
         </Link>
       </div>
