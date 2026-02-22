@@ -1,4 +1,4 @@
-# Pingpong Frontend
+# Nexus Frontend
 
 ## 技術棧
 
