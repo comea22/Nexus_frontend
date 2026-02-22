@@ -1,34 +1,34 @@
 # Nexus Frontend
 
-## 技術棧
+## Tech Stack
 
-- **React** 19 - 前端框架
-- **Vite** 7 - 建置工具
-- **Tailwind CSS** 4 - CSS 框架
-- **React Router DOM** 7 - 路由管理
-- **TanStack React Query** - 資料請求管理
-- **Axios** - HTTP 請求
-- **Lucide React** - Icon 圖示庫
-- **Sonner** - Toast 通知
+- **React** 19 - Frontend framework
+- **Vite** 7 - Build tool
+- **Tailwind CSS** 4 - CSS framework
+- **React Router DOM** 7 - Routing
+- **TanStack React Query** - Data fetching
+- **Axios** - HTTP client
+- **Lucide React** - Icon library
+- **Sonner** - Toast notifications
 
-## 開始使用
+## Getting Started
 
-### 安裝依賴
+### Install dependencies
 ```bash
 npm install
 ```
 
-### 啟動開發伺服器
+### Start development server
 ```bash
 npm run dev
 ```
 
-### 建置正式版本
+### Build for production
 ```bash
 npm run build
 ```
 
-### 預覽正式版本
+### Preview production build
 ```bash
 npm run preview
 ```
