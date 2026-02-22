@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  /* 固定色 */
+  --color-primary: #1f42a3;
+  --color-primary-hover: #3a5db8;
+
+  /* 動態色（會隨 dark mode 變化） */
+  --color-bg: var(--theme-bg);
+  --color-bg-secondary: var(--theme-bg-secondary);
+  --color-text: var(--theme-text);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-border: var(--theme-border);
+  --color-header: var(--theme-header);
+  --color-footer: var(--theme-footer);
+}
+
 #root {
   text-align: center;
 }
@@ -8,42 +23,45 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light;
-  color: #213547;
-  background-color: #ffffff;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Light mode */
+  --theme-bg: #ffffff;
+  --theme-bg-secondary: #f3f4f6;
+  --theme-text: #213547;
+  --theme-text-secondary: #6b7280;
+  --theme-border: #e5e7eb;
+  --theme-header: #ffffff;
+  --theme-footer: #e5e7eb;
 }
 
+.dark {
+  /* Dark mode */
+  --theme-bg: #111827;
+  --theme-bg-secondary: #1f2937;
+  --theme-text: #f9fafb;
+  --theme-text-secondary: #9ca3af;
+  --theme-border: #374151;
+  --theme-header: #1f2937;
+  --theme-footer: #1f2937;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-}
-
-
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  padding-top: 7rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
 }
