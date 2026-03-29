@@ -1,8 +1,9 @@
 import { Trophy } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
-function EventCard({ title, date, image }) {
+function EventCard({ id, title, date, image, from }) {
   return (
-    <div className="border border-border rounded-2xl overflow-hidden transition-shadow hover:shadow-md cursor-pointer">
+    <Link to={`/events/${id}`} state={from ? { from } : undefined} className="border border-border rounded-2xl overflow-hidden transition-shadow hover:shadow-md cursor-pointer block">
       {image ? (
         <img src={image} alt={title} className="w-full h-40 object-cover" />
       ) : (
@@ -14,7 +15,7 @@ function EventCard({ title, date, image }) {
         <h3 className="font-bold text-text">{title}</h3>
         <p className="text-text-secondary text-sm mt-1">{date}</p>
       </div>
-    </div>
+    </Link>
   )
 }
 

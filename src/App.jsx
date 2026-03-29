@@ -10,6 +10,9 @@ import Login from './pages/Login'
 import ForgotPassword from './pages/ForgotPassword'
 import Profile from './pages/Profile'
 import Events from './pages/Events'
+import EventDetail from './pages/EventDetail'
+import MatchSchedule from './pages/MatchSchedule'
+import EditProfile from './pages/EditProfile'
 import { useAuth } from './contexts/AuthContext'
 
 function App() {
@@ -28,7 +31,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/edit" element={<EditProfile />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/:id" element={<EventDetail />} />
+          <Route path="/events/:id/match-schedule" element={<MatchSchedule />} />
         </Routes>
       </main>
 

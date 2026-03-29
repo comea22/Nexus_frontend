@@ -171,6 +171,7 @@ function Events() {
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}
+              id={event.id}
               title={event.title}
               date={format(event.start, 'yyyy/MM/dd')}
             />

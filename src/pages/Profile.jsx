@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
-import { Bookmark, Trophy, History, ClipboardList, Mail } from 'lucide-react'
+import { Bookmark, Trophy, History, ClipboardList, Mail, LogOut, KeyRound } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import EventCard from '../components/EventCard'
+import RegistrationCard from '../components/RegistrationCard'
 
 // TODO: 替換為 API 資料
 const mockUser = {
@@ -17,8 +18,8 @@ const mockEvents = {
     { id: 2, title: '台北市桌球邀請賽', date: '2025-09-20' },
   ],
   registrations: [
-    { id: 7, title: '2025 全國桌球公開賽', date: '2025-08-15' },
-    { id: 8, title: '2025 秋季桌球聯賽', date: '2025-10-05' },
+    { id: 1, title: '2026 全國桌球公開賽', date: '2026-04-15', location: '台北小巨蛋' },
+    { id: 3, title: '2026 秋季桌球聯賽', date: '2026-07-05', location: '新北市立體育場' },
   ],
   upcoming: [
     { id: 3, title: '2025 秋季桌球聯賽', date: '2025-10-05' },
@@ -68,7 +69,7 @@ function Profile() {
   }, [])
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-8">
+    <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-16">
       {/* 左側：個人資訊 + Tab 切換 */}
       <div className="md:w-64 shrink-0">
         {/* 個人資訊區 */}
@@ -85,9 +86,9 @@ function Profile() {
           </div>
         </div>
 
-        <button className="w-full mb-6 px-4 py-1.5 text-sm border border-primary text-primary rounded-2xl font-medium transition-colors hover:bg-primary hover:text-white cursor-pointer">
+        <Link to="/profile/edit" className="w-full mb-6 px-4 py-1.5 text-sm border border-primary text-primary rounded-2xl font-medium transition-colors hover:bg-primary hover:text-white cursor-pointer block text-center">
           編輯個人檔案
-        </button>
+        </Link>
 
         {/* Tab 切換 */}
         <div className="flex flex-row md:flex-col border-b md:border-b-0 border-border">
@@ -110,6 +111,15 @@ function Profile() {
         <hr className="border-border my-4" />
 
         <div className="flex flex-row md:flex-col gap-1">
+          <Link to="/change-password" className="flex-1 md:flex-none flex items-center gap-2 py-3 md:px-2 justify-center md:justify-start text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">
+            <KeyRound className="w-4 h-4" />
+            變更密碼
+          </Link>
+          <button onClick={() => { /* TODO: 串接登出 API */ }} className="flex-1 md:flex-none flex items-center gap-2 py-3 md:px-2 justify-center md:justify-start text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">
+            <LogOut className="w-4 h-4" />
+            登出
+          </button>
+          <hr className="border-border my-2" />
           <Link to="/contact" className="flex-1 md:flex-none flex items-center gap-2 py-3 md:px-2 justify-center md:justify-start text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">
             <Mail className="w-4 h-4" />
             聯絡我們
@@ -127,15 +137,31 @@ function Profile() {
             className="scroll-mt-32"
           >
             <h2 className="text-xl font-bold text-text mb-4 text-left border-l-4 border-primary pl-3">{label}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {mockEvents[key].map((event) => (
-                <EventCard
-                  key={event.id}
-                  title={event.title}
-                  date={event.date}
-                />
-              ))}
-            </div>
+            {key === 'registrations' ? (
+              <div className="flex flex-col gap-4">
+                {mockEvents[key].map((event) => (
+                  <RegistrationCard
+                    key={event.id}
+                    id={event.id}
+                    title={event.title}
+                    date={event.date}
+                    location={event.location}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {mockEvents[key].map((event) => (
+                  <EventCard
+                    key={event.id}
+                    id={event.id}
+                    title={event.title}
+                    date={event.date}
+                    from="profile"
+                  />
+                ))}
+              </div>
+            )}
           </section>
         ))}
       </div>
