@@ -1,0 +1,104 @@
+/* 工具列按鈕 */
+.rbc-toolbar button {
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background-color: transparent;
+  padding: 12px 18px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.rbc-toolbar button:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.rbc-toolbar button.rbc-active:hover {
+  background-color: var(--color-primary-hover);
+  color: #ffffff;
+}
+
+/* 工具列標題 */
+.rbc-toolbar .rbc-toolbar-label {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* 星期標題列 */
+.rbc-header {
+  color: var(--color-text);
+  border-color: var(--color-border);
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+/* 日期格子 */
+.rbc-month-view,
+.rbc-time-view {
+  border-color: var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.rbc-month-row,
+.rbc-day-bg {
+  border-color: var(--color-border);
+}
+
+.rbc-off-range-bg {
+  background-color: var(--color-bg-secondary);
+}
+
+/* 今天 */
+.rbc-today {
+  background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+/* 日期數字 */
+.rbc-date-cell {
+  color: var(--color-text);
+  padding: 4px 8px;
+}
+
+.rbc-off-range {
+  color: var(--color-text-secondary);
+}
+
+/* 事件區塊 */
+.rbc-event {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 13px;
+}
+
+.rbc-event:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* 選中的事件 */
+.rbc-selected {
+  background-color: var(--color-primary-hover);
+}
+
+/* 議程檢視 */
+.rbc-agenda-view table {
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.rbc-agenda-view table thead th {
+  border-color: var(--color-border);
+}
+
+.rbc-agenda-view table tbody tr td {
+  border-color: var(--color-border);
+}
