@@ -9,6 +9,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import ForgotPassword from './pages/ForgotPassword'
 import Profile from './pages/Profile'
+import Events from './pages/Events'
 import { useAuth } from './contexts/AuthContext'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/events" element={<Events />} />
         </Routes>
       </main>
 
