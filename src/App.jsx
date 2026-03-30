@@ -13,6 +13,7 @@ import Events from './pages/Events'
 import EventDetail from './pages/EventDetail'
 import MatchSchedule from './pages/MatchSchedule'
 import EditProfile from './pages/EditProfile'
+import ScrollToTop from './components/ScrollToTop'
 import { useAuth } from './contexts/AuthContext'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       {isLoggedIn ? <HeaderLoggedIn /> : <Header />}
 
       <main className="flex-grow">
