@@ -14,24 +14,24 @@ function Footer() {
           <div>
             <h3 className="font-bold mb-4">條款與政策</h3>
             <ul className="space-y-2 text-sm text-text-secondary">
-              <li><Link to="/privacy" className="hover:underline">隱私權政策</Link></li>
-              <li><Link to="/terms" className="hover:underline">服務條款</Link></li>
+              <li><Link to="/privacy" className="hover:underline hover:underline-offset-4">隱私權政策</Link></li>
+              <li><Link to="/terms" className="hover:underline hover:underline-offset-4">服務條款</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold mb-4">會員資訊</h3>
             <ul className="space-y-2 text-sm text-text-secondary">
-              <li><Link to="/register" className="hover:underline">會員註冊</Link></li>
-              <li><Link to="/login" className="hover:underline">會員登入</Link></li>
+              <li><Link to="/register" className="hover:underline hover:underline-offset-4">會員註冊</Link></li>
+              <li><Link to="/login" className="hover:underline hover:underline-offset-4">會員登入</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold mb-4">關於我們</h3>
             <ul className="space-y-2 text-sm text-text-secondary">
-              <li><Link to="/about" className="hover:underline">簡介</Link></li>
-              <li><a href="mailto:contact@example.com" className="hover:underline">contact@example.com</a></li>
+              <li><Link to="/about" className="hover:underline hover:underline-offset-4">系統簡介</Link></li>
+              <li><Link to="/contact" className="hover:underline hover:underline-offset-4">聯絡我們</Link></li>
             </ul>
           </div>
         </div>

@@ -22,24 +22,28 @@ const mockEvents = [
   {
     id: 1,
     title: '2026 全國桌球公開賽',
+    location: '台北小巨蛋',
     start: new Date(2026, 3, 15),
     end: new Date(2026, 3, 17),
   },
   {
     id: 2,
     title: '台北市桌球邀請賽',
+    location: '台北體育館',
     start: new Date(2026, 4, 20),
     end: new Date(2026, 4, 21),
   },
   {
     id: 3,
     title: '2026 秋季桌球聯賽',
+    location: '新北市立體育場',
     start: new Date(2026, 6, 5),
     end: new Date(2026, 6, 5),
   },
   {
     id: 4,
     title: '新北市桌球錦標賽',
+    location: '新北市立體育館',
     start: new Date(2026, 8, 12),
     end: new Date(2026, 8, 14),
   },
@@ -174,6 +178,7 @@ function Events() {
               id={event.id}
               title={event.title}
               date={format(event.start, 'yyyy/MM/dd')}
+              location={event.location}
             />
           ))}
         </div>

@@ -5,11 +5,9 @@ function Home() {
   const [openIndex, setOpenIndex] = useState(null)
 
   const faqs = [
-    { question: '問題一的內容在這裡？', answer: '答案一的內容在這裡，可以填寫詳細的說明文字。' },
-    { question: '問題二的內容在這裡？', answer: '答案二的內容在這裡，可以填寫詳細的說明文字。' },
-    { question: '問題三的內容在這裡？', answer: '答案三的內容在這裡，可以填寫詳細的說明文字。' },
-    { question: '問題四的內容在這裡？', answer: '答案四的內容在這裡，可以填寫詳細的說明文字。' },
-    { question: '問題五的內容在這裡？', answer: '答案五的內容在這裡，可以填寫詳細的說明文字。' },
+    { question: '請問一定要成為會員才可以報名比賽嗎？', answer: '是的，一定要註冊成爲會員（成為龍濱桌協的一員），才可以報名比賽，並享有管理個人賽事、編輯比賽狀態等服務。' },
+    { question: '請問我該如何成為龍濱桌協的成員呢？', answer: '入會需繳納會費，若有興趣，歡迎聯繫 XXX，或者於每週四親臨龍濱桌協詢問。' },
+    { question: '我還想問其他問題，該如何詢問？', answer: '歡迎來信至 example@gmail.com，我們會盡快回信。' },
   ]
 
   const toggleFaq = (index) => {
@@ -35,6 +33,19 @@ function Home() {
           尋找賽事
         </button>
       </div>
+
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold inline-block pb-4 border-b-6 border-primary">功能簡介</h2>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/1200x400"
+            alt="功能簡介"
+            className="w-full rounded-2xl"
+          />
+        </div>
+      </section>
 
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
@@ -66,7 +77,7 @@ function Home() {
                 />
               </button>
               {openIndex === index && (
-                <div className="p-5 pt-0 text-text-secondary">
+                <div className="p-5 pt-0 mt-4 text-text-secondary text-left">
                   {faq.answer}
                 </div>
               )}

@@ -14,20 +14,20 @@ const mockUser = {
 
 const mockEvents = {
   favorites: [
-    { id: 1, title: '2025 全國桌球公開賽', date: '2025-08-15' },
-    { id: 2, title: '台北市桌球邀請賽', date: '2025-09-20' },
+    { id: 1, title: '2025 全國桌球公開賽', date: '2025-08-15', location: '台北小巨蛋' },
+    { id: 2, title: '台北市桌球邀請賽', date: '2025-09-20', location: '台北體育館' },
   ],
   registrations: [
     { id: 1, title: '2026 全國桌球公開賽', date: '2026-04-15', location: '台北小巨蛋' },
     { id: 3, title: '2026 秋季桌球聯賽', date: '2026-07-05', location: '新北市立體育場' },
   ],
   upcoming: [
-    { id: 3, title: '2025 秋季桌球聯賽', date: '2025-10-05' },
-    { id: 4, title: '新北市桌球錦標賽', date: '2025-11-12' },
+    { id: 3, title: '2025 秋季桌球聯賽', date: '2025-10-05', location: '新北市立體育場' },
+    { id: 4, title: '新北市桌球錦標賽', date: '2025-11-12', location: '新北市立體育館' },
   ],
   past: [
-    { id: 5, title: '2025 春季桌球聯賽', date: '2025-03-10' },
-    { id: 6, title: '高雄市桌球友誼賽', date: '2025-01-22' },
+    { id: 5, title: '2025 春季桌球聯賽', date: '2025-03-10', location: '台中市體育館' },
+    { id: 6, title: '高雄市桌球友誼賽', date: '2025-01-22', location: '高雄巨蛋' },
   ],
 }
 
@@ -157,6 +157,7 @@ function Profile() {
                     id={event.id}
                     title={event.title}
                     date={event.date}
+                    location={event.location}
                     from="profile"
                   />
                 ))}
