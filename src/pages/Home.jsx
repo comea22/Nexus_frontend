@@ -17,19 +17,19 @@ function Home() {
   return (
     <main>
       <div className="relative h-[400px] md:h-[700px] overflow-hidden">
-        {/* 模糊背景 (桌面版才顯示) */}
+        {/* 底層：banner */}
         <img
-          src="/main.jpg"
-          alt=""
-          className="hidden md:block absolute inset-0 w-full h-full object-cover blur-xl scale-110"
+          src="/banner.webp"
+          alt="Banner"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* 主圖：手機版 cover 填滿，桌面版 contain 正常比例 */}
+        {/* 上層：player */}
         <img
-          src="/main.jpg"
+          src="/player.webp"
           alt="首頁圖片"
-          className="relative w-full h-full object-cover md:object-contain md:w-auto md:mx-auto"
+          className="relative w-full h-full object-cover md:object-contain md:w-auto md:mx-auto md:translate-x-60"
         />
-        <button className="absolute top-3/5 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-bg-secondary px-5 py-2 md:px-8 md:py-3 rounded-xl md:rounded-2xl text-base md:text-xl font-semibold shadow-[0_4px_20px_rgba(255,255,255,0.8)] hover:opacity-80 hover:-translate-y-[calc(50%+4px)] transition-transform cursor-pointer">
+        <button className="absolute top-[85%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white border-2 border-white px-8 py-3 md:px-12 md:py-4 rounded-full text-lg md:text-2xl font-semibold hover:opacity-80 transition-opacity cursor-pointer">
           尋找賽事
         </button>
       </div>
